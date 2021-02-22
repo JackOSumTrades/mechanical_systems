@@ -99,7 +99,7 @@ class Graph:
             if self.adjacencylist[thisNodeKey][0] not in self.adjacencylist[key]:
                 self.adjacencylist[key].append(self.adjacencylist[thisNodeKey][0])
                     
-        print((self.adjacencylist))
+        # print((self.adjacencylist))
     def make_edges(self):
         for nodeKey in self.adjacencylist:
             closestNodes = []
@@ -121,7 +121,7 @@ class Graph:
             #End Node
             if len(closestNodeInplane) == 0 :
                 # print(closestNodeInplane)
-                print(nodeKey)
+                # print(nodeKey)
                 otherNodeKeys = [node['key'] for node in closestNodeOutplane]
                 otherNodeKeys = otherNodeKeys[0:2*self.N_step_Az]
                 
@@ -236,7 +236,7 @@ class Graph:
                             # print(det.size)
                             # print(np.linalg.det(det))
                             # visited.append(item)
-                            self.quads.append(quad(vs=[a,b,d,c]))
+                            self.quads.append(quad(vs=[b,a,c,d]))
                             print(self.adjacencylist[str(nodeKey)][0], self.adjacencylist[str(nodeKey)][idx_2], self.adjacencylist[str(nodeKey)][idx_3],self.adjacencylist[str(item)][0] )
                             # input()
                             
@@ -285,8 +285,8 @@ class Graph:
         out['name']=nodes_obj
         print(out)
 r = 0.25
-N_step_Az = 20
-N_step_Th = 20
+N_step_Az = 40
+N_step_Th = 40
 
 g = Graph(N_step_Az,N_step_Th)
 for idx,theta in enumerate(np.linspace(0,2*pi, N_step_Th+1)):#needs be odd [will generate (Nsteps-1) points on azimuth line

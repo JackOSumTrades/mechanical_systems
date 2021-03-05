@@ -12,4 +12,4 @@ Want to implement a representation of earth as a collection of particles  (an ob
 	so that I can then create entities such as asteroids and simulate their impact on earth and the resulting formation
 		(see if they form a new satellite-ie how the moon formed)
 		
-## Please Note: The majority of these programs are for proof-of-concept purposes and are in need of more commentaion 
+#### Please Note: The majority of these programs are for proof-of-concept purposes and are in need of more commentaion 

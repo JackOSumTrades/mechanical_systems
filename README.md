@@ -32,7 +32,20 @@ Some functions that will be made public are:
   - Smoothing functions (running average, least squares)
   - Algorithms (QR Algorithm)
   - Functions (Debye Temperature, Quantum potential step, madelung constant, stefan-boltzman constant, Gravitational pull on uniform sheet, Gamma Function, Electric field of a charge distribution)
-  - 
+## Contents - mechanical_systems/montecarlo
+- calcPi.py
+   - VERY simple montecarlo simulation produced for a presentation on montecarlo simulations
+   - pi_calc_0.jpg is the base boundary setup
+   - pi_calc_1000.jpg is after a thousand tosses
+- infLine_monte.py
+   - A simple montecarlo simulation used to solve numerically the infinite lines and bar problem
+   - results_1000000.jpg is one of the results after 1 million tosses (notice the incorrect boundary condition on the right edge that skews results)
+   - results_100.jpg is after 100 tosses (this one is more correct than the 1mil toss one due to the error in the boundary condition)
+- particleGravitation.py
+   - Not truly a montecarlo simulation due to the lack of end goal
+   - This simulation generates the sun (yellow) with the correct mass and radius (scaled down in visual)
+     - N number planets are formed with masses, positions, and velocities randomly varying between those of all the known planets in our solar system (excluding pluto) 
+     - The simulation takes into account the gravitational effects of each of the other planets, and if there are any collisions (radiuses overlap) then the collision is assumed to be 100% inelastic and the masses merge to one point with the corresponding new velocity
 ## Future Implementation Plans:
   - Implement a 2D stress FEA analysis 
   - Implement a 3D stress FEA analysis

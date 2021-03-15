@@ -45,7 +45,7 @@ class ball:
        
     def move(self, deltaT):
         # print(self.velocity*deltaT)
-        self.position = self.position + self.velocity*deltaT 
+        self.position = self.position + self.velocity*deltaT + 0.5*self.acceleration*deltaT**2
         
         self.velocity = self.acceleration*deltaT + self.velocity
         
@@ -121,7 +121,7 @@ b1 = ball([0,13,0], [2,0,0],col=color.green)
 b1.show()
 
 for t in range(0,100000):
-    rate(10000)
+    rate(1000)
     b1.move(.001)
     b1 = from_floor.detectCollision(b1)
     b1 = to_floor.detectCollision(b1)

@@ -4,6 +4,9 @@ from math import pi, sqrt, sin, cos, radians, degrees, asin
 import pandas as pd
 import random
 
+
+# If i decide to convert this to matplotlib, I can keep track of every previous position through chains of linkedlist and if they are one of the remaining N satellites, then I can draw the tails
+
 class Particle:
     def __init__(self, mass, position, velocity=[0,0,0], radius = 3e6, col=color.white):
         self.radius = radius

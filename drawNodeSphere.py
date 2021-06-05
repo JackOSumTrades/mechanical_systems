@@ -285,8 +285,8 @@ class Graph:
         out['name']=nodes_obj
         print(out)
 r = 0.25
-N_step_Az = 40
-N_step_Th = 40
+N_step_Az = 20
+N_step_Th = 20
 
 g = Graph(N_step_Az,N_step_Th)
 for idx,theta in enumerate(np.linspace(0,2*pi, N_step_Th+1)):#needs be odd [will generate (Nsteps-1) points on azimuth line
